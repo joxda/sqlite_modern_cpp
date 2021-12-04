@@ -113,7 +113,7 @@ namespace sqlite::utility {
 	};
 	template<typename T, typename ...Options>
 	struct VariantFirstTextable<T, Options...> {
-		using type = typename VariantFirstTextable<void, Options...>::type;
+		using type = typename VariantFirstTextable<Options...>::type;
 	};
 #ifdef MODERN_SQLITE_STD_OPTIONAL_SUPPORT
 	template<typename T, typename ...Options>
