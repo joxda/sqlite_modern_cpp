@@ -696,6 +696,10 @@ namespace sqlite {
 		return db;
 	}
 
+ inline void get_col_from_db(database_binder& db, int inx, std::nullptr_t) {
+   
+}
+
 	/* for unique_ptr<T> support */
 	template<typename T> inline void get_col_from_db(database_binder& db, int inx, std::unique_ptr<T>& _ptr_) {
 		if(sqlite3_column_type(db._stmt.get(), inx) == SQLITE_NULL) {
